@@ -1,0 +1,18 @@
+<x-main-layout 
+    title="{{$product->page_title}}"
+    description="{{$product->page_description}}"
+    keywords="{{$product->keywords}}"
+    >
+    <div class="container mx-auto">
+        <h2>{{$product->title}}</h2>
+        <div class="border mb-4 flex">
+            <img class="w-28 h-full aspect-1 mr-4" src="{{ Vite::asset($product->path_img) }}"
+                alt="{{ $product->title }}">
+            <div>
+                <p>{{ $product->description }}</p>
+                <p>Цена: {{ $product->price}}</p>
+                <p>Категория: {{ $product->category->title }}</p>
+            </div>
+        </div>
+    </div>
+</x-main-layout>

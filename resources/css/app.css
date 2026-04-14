@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import 'tailwindcss';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+
+/* ---------------------basic and main layout----------------------- */
+html,
+body{
+    height: 100%;
+    min-height: 100%;
+}
+html{
+    font-family: 'Century Gothic';
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.site-icon{
+    font-size: 40px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+.site-icon:hover,
+.site-icon:focus{
+    color: rgb(107, 57, 0);
+}
+.site-name{
+    transition: color 0.3s ease;
+}
+.site-name:hover,
+.site-name:focus{
+    color: rgb(107, 57, 0);
+}
+.index-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.index-con h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+header{
+    background-color: rgb(255, 145, 1);
+    color: white;
+    font-weight: bold;
+}
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer{
+    background-color: rgb(255, 145, 1);
+    color: white;
+    font-weight: bold;
+}
+footer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    flex-grow: 1;
+}
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    justify-items: center;
+}
+.search-input{
+    background-color: rgba(128, 128, 128, 0.363);
+    padding: 5px;
+    transition: background-color 0.3s ease;
+}
+.search-input:hover,
+.search-input:focus{
+    background-color: rgba(128, 128, 128, 0.753);
+}
+.search-button{
+    cursor: pointer;
+    width: 40px;
+    transition: color 0.3s ease;
+}
+.search-button:hover,
+.search-button:focus{
+    color: gray;
+}
+.trash-button{
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.trash-button:hover,
+.trash-button:focus{
+    color: rgb(211, 0, 0);
+}
+.bi-trash-fill{
+    font-size: 30px;
+}
+.main-menu li{
+    transition: color 0.3s ease;
+}
+.main-menu li:hover,
+.main-menu li:focus{
+    color: rgb(107, 57, 0);
+}
+.create-card{
+    transition: color 0.3s ease;
+}
+.create-card:hover,
+.create-card:focus{
+    color: rgb(107, 57, 0);
+}
+
+/* ---------------index--------------- */
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+.categ-title{
+    font-size: large;
+    margin-top: 40px;
+}
