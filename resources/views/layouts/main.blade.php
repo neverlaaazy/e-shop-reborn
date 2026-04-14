@@ -41,6 +41,14 @@
     </main>
     <footer>
         <div class="container">
+            <div class="navigation-div">
+                <p>Навигация</p>
+                <ul>
+                    @foreach ($categories as $category)
+                        <li class="navigation-li"><a href="#category{{ $loop->iteration }}">{{ $category->title }}</a></li>
+                    @endforeach
+                </ul>
+            </div>
             <p>&copy;Шаповалов Сергей Алексаднрович, ПИ-232. МИДиС, г.Челябинск</p>
         </div>
     </footer>

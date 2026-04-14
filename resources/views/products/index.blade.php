@@ -3,7 +3,7 @@
         <h2>Каталог товаров</h2>
         <div>
             @foreach ($categories as $category)
-            <h3 class="categ-title">{{ $category->title }}</h3>
+            <h3 class="categ-title" id="category{{ $loop->iteration }}">{{ $category->title }}</h3>
             @foreach ($category->products as $product)
             <div class="border mb-4 flex card">
                 <img class="w-28 h-full aspect-1 mr-4" src="{{ Vite::asset($product->path_img) }}"
@@ -17,11 +17,11 @@
                     <p>{{ $product->category->title}}</p>
                 </div>
                 <div class="ml-auto">
-                    <a href="{{ route('products.edit',['product'=>$product]) }}">Редактировать</a>
-                    <form action="{{ route('products.destroy',['product'=>$product]) }}" method="POST">
+                    <a class="edit-card" href="{{ route('products.edit',['product'=>$product]) }}">Редактировать</a>
+                    <form class="form-delete" action="{{ route('products.destroy',['product'=>$product]) }}" method="POST">
                         @csrf
                         @method('delete')
-                        <input type="submit" value="Удалить">
+                        <input class="delete-card" type="submit" value="Удалить">
                     </form>
                 </div>
 

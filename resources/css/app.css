@@ -27,6 +27,7 @@ body{
 }
 html{
     font-family: 'Century Gothic';
+    scroll-behavior: smooth;
 }
 body{
     display: flex;
@@ -75,9 +76,25 @@ footer{
 }
 footer div{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.navigation-div{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+}
+.navigation-li{
+    color: rgba(0, 0, 0, 0.507);
+    transition: color 0.3s ease;
+}
+.navigation-li:hover,
+.navigation-li:focus{
+    color: rgb(32, 32, 32);
+}
+
 main{
     flex-grow: 1;
 }
@@ -142,4 +159,32 @@ main{
 .categ-title{
     font-size: large;
     margin-top: 40px;
+}
+.delete-card{
+    color: red;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.089);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.delete-card:hover,
+.delete-card:focus{
+    color: white;
+    background-color: red;
+}
+.edit-card{
+    color: rgb(0, 151, 76);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.089);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.edit-card:hover,
+.edit-card:focus{
+    color: white;
+    background-color: rgb(0, 151, 76);
+}
+.form-delete{
+    margin-top: 10px;
 }
