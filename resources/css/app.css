@@ -188,3 +188,44 @@ main{
 .form-delete{
     margin-top: 10px;
 }
+
+/* ---------------create product--------------- */
+.create-form{
+    border: 2px gray solid;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+}
+.create-form input,
+.create-form textarea,
+.create-form select{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 2px gray solid;
+    border-radius: 10px;
+    width: 100%;
+}
+.desc-create{
+    min-height: 150px;
+    max-height: 250px;
+}
+.btn-create{
+    font-weight: bold;
+    border: 2px gray solid;
+    border-radius: 10px;
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+}
+.btn-create:hover,
+.btn-create:focus{
+    border-color: white;
+    background-color: gray;
+    color: white;
+}
+/* ---------------p-main--------------- */
+
+.pmain{
+    background-color: aqua;
+}

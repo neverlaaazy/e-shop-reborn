@@ -6,9 +6,13 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::redirect('/', '/products');
+
+
 
 Route::get('/products',[ProductController::class, 'index'])
             ->name('products.index');
