@@ -19,7 +19,7 @@
             </div>
             <nav>
                 <ul class="flex gap-4 main-menu">
-                    <li><a href="{{route('products.index')}}">Главная</a></li>
+                    <li><a href="{{route('products.p-main')}}">Главная</a></li>
                     <li><a href="{{route('products.index')}}">Каталог</a></li>
                     <li><a href="">Контакты</a></li>
                 </ul>

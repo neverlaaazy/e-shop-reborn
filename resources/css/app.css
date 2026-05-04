@@ -189,8 +189,9 @@ main{
     margin-top: 10px;
 }
 
-/* ---------------create product--------------- */
-.create-form{
+/* -------------create product - edit-form--------------- */
+.create-form,
+.edit-form{
     border: 2px gray solid;
     border-radius: 10px;
     padding: 15px;
@@ -199,7 +200,10 @@ main{
 }
 .create-form input,
 .create-form textarea,
-.create-form select{
+.create-form select,
+.edit-form input,
+.edit-form textarea,
+.edit-form select{
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
@@ -207,11 +211,13 @@ main{
     border-radius: 10px;
     width: 100%;
 }
-.desc-create{
+.desc-create,
+.desc-update{
     min-height: 150px;
     max-height: 250px;
 }
-.btn-create{
+.btn-create,
+.btn-edit{
     font-weight: bold;
     border: 2px gray solid;
     border-radius: 10px;
@@ -219,13 +225,48 @@ main{
     transition: all 0.2s ease-in-out;
 }
 .btn-create:hover,
-.btn-create:focus{
+.btn-create:focus,
+.btn-edit:hover,
+.btn-edit:focus{
     border-color: white;
     background-color: gray;
     color: white;
 }
 /* ---------------p-main--------------- */
-
-.pmain{
-    background-color: aqua;
+.con-pmain div{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.pmain-banner{
+    width: 100%;
+}
+.pmain-banner img{
+    width: 100%;
+    border-radius: 10px;
+    filter: hue-rotate(40deg);
+}
+.pmain-info h3{
+    font-weight: bold;
+}
+.pmain-info p{
+    text-indent: 2em;
+}
+.pmain-info ul{
+    list-style: circle;
+    padding-left: 40px;
+}
+.pmain-contacts{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pmain-contacts-map iframe{
+    width: 800px;
+    height: 400px;
+}
+.separation{
+    height: 2px;
+    width: 1090px;
+    background-color: #4a4a4a;
 }
