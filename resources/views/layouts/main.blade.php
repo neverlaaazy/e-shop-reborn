@@ -14,8 +14,8 @@
     <header class="flex justify-between">
         <div class="container">
             <div>
-                <a href="{{route('products.index')}}"><i class="bi bi-box-fill site-icon"></i></a>
-                <h1 class="site-name"><a href="{{route('products.index')}}">Интернет-магазин</a></h1>
+                <a href="{{route('products.p-main')}}"><i class="bi bi-box-fill site-icon"></i></a>
+                <h1 class="site-name"><a href="{{route('products.p-main')}}">Интернет-магазин</a></h1>
             </div>
             <nav>
                 <ul class="flex gap-4 main-menu">
