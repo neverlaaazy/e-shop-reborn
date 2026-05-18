@@ -286,3 +286,28 @@ main{
     width: 1090px;
     background-color: #4a4a4a;
 }
+
+/* -----------------------show------------------------- */
+.showcard{
+    padding: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.showcard button{
+    padding: 5px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: white;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+.showcard button:hover,
+.showcard button:focus{
+    background-color: gray;
+    color: white;
+    border-color: white;
+}
