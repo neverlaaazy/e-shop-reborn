@@ -173,9 +173,9 @@ main{
     color: white;
     background-color: red;
 }
-.edit-card{
+.edit-card, .watch-card{
     color: rgb(0, 151, 76);
-    padding: 5px;
+    padding: 3px;
     background-color: rgba(0, 0, 0, 0.089);
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -185,8 +185,22 @@ main{
     color: white;
     background-color: rgb(0, 151, 76);
 }
-.form-delete{
-    margin-top: 10px;
+.watch-card{
+    color: blue;
+}
+.watch-card:hover,
+.watch-card:focus{
+    color: white;
+    background-color: blue;
+}
+.manipulator-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+}
+.manipulator-card{
+    margin: 5px;
 }
 
 /* -------------create product - edit-form--------------- */

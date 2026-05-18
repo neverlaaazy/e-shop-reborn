@@ -16,9 +16,10 @@
                     <p>{{ $product->price}}</p>
                     <p>{{ $product->category->title}}</p>
                 </div>
-                <div class="ml-auto">
-                    <a class="edit-card" href="{{ route('products.edit',['product'=>$product]) }}">Редактировать</a>
-                    <form class="form-delete" action="{{ route('products.destroy',['product'=>$product]) }}" method="POST">
+                <div class="ml-auto manipulator-div">
+                    <a class="watch-card manipulator-card" href="{{route('products.show',['product'=>$product])}}">Посмотреть</a>
+                    <a class="edit-card manipulator-card" href="{{ route('products.edit',['product'=>$product]) }}">Редактировать</a>
+                    <form class="form-delete manipulator-card" action="{{ route('products.destroy',['product'=>$product]) }}" method="POST">
                         @csrf
                         @method('delete')
                         <input class="delete-card" type="submit" value="Удалить">
