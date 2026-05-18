@@ -6,8 +6,10 @@
     <div class="container mx-auto">
         <h2>{{$product->title}}</h2>
         <div class="border mb-4 flex">
-            <img class="w-28 h-full aspect-1 mr-4" src="{{ Vite::asset($product->path_img) }}"
-                alt="{{ $product->title }}">
+            @if($product->image_url)
+                <img class="w-28 h-full aspect-1 mr-4" src="{{ $product->image_url }}"
+                    alt="{{ $product->title }}">
+            @endif
             <div>
                 <p>{{ $product->description }}</p>
                 <p>Цена: {{ $product->price}}</p>

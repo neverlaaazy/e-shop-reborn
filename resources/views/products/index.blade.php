@@ -1,13 +1,30 @@
-<x-main-layout>
+<x-main-layout title="Каталог товаров" description="Полный каталог товаров магазина" keywords="каталог, товары, мебель">
     <div class="container index-con mx-auto">
         <h2>Каталог товаров</h2>
+
+        <div class="categories-menu mb-6">
+            <h3>Категории</h3>
+            <div class="flex flex-wrap gap-3">
+                @foreach ($categories as $category)
+                    <a href="{{ route('categories.show', $category) }}" class="px-4 py-2 bg-slate-100 rounded hover:bg-slate-200 transition">
+                        {{ $category->title }}
+                        @if($category->products->count())
+                            ({{ $category->products->count() }})
+                        @endif
+                    </a>
+                @endforeach
+            </div>
+        </div>
+
         <div>
             @foreach ($categories as $category)
-            <h3 class="categ-title" id="category{{ $loop->iteration }}">{{ $category->title }}</h3>
+            <h3 class="categ-title" id="category-{{ $category->id }}">{{ $category->title }}</h3>
             @foreach ($category->products as $product)
             <div class="border mb-4 flex card">
-                <img class="w-28 h-full aspect-1 mr-4" src="{{ Vite::asset($product->path_img) }}"
-                    alt="{{ $product->title }}">
+                @if($product->image_url)
+                    <img class="w-28 h-full aspect-1 mr-4" src="{{ $product->image_url }}"
+                        alt="{{ $product->title }}">
+                @endif
                 <div>
                     <a href="{{route('products.show',['product'=>$product])}}">
                         <h4>{{ $product->title }}</h4>

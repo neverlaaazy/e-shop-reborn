@@ -21,6 +21,7 @@
                 <ul class="flex gap-4 main-menu">
                     <li><a href="{{route('products.p-main')}}">Главная</a></li>
                     <li><a href="{{route('products.index')}}">Каталог</a></li>
+                    <li><a href="{{route('categories.index')}}">Категории</a></li>
                     <li><a href="">Контакты</a></li>
                 </ul>
             </nav>
@@ -45,7 +46,7 @@
                 <p>Навигация</p>
                 <ul>
                     @foreach ($categories as $category)
-                        <li class="navigation-li"><a href="#category{{ $loop->iteration }}">{{ $category->title }}</a></li>
+                        <li class="navigation-li"><a href="{{ route('categories.show', $category) }}">{{ $category->title }}</a></li>
                     @endforeach
                 </ul>
             </div>

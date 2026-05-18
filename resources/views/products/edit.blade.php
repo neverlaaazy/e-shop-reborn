@@ -1,6 +1,6 @@
-<x-main-layout>
+<x-main-layout title="Редактировать продукт {{ $product->title }}" description="Редактирование продукта {{ $product->title }}" keywords="редактировать продукт, изменить товар">
     <div class="container mx-auto">
-        <form class="edit-form" method="POST" action="{{ route('products.update',['product'=>$product]) }}">
+        <form class="edit-form" method="POST" action="{{ route('products.update',['product'=>$product]) }}" enctype="multipart/form-data">
             @csrf
             @method('put')
             <label for="title">Название продукта</label><br>
@@ -18,6 +18,15 @@
                 </option>
                 @endforeach
             </select><br>
+
+            @if($product->image_url)
+                <div class="mb-4">
+                    <img class="w-28 h-full aspect-1 mr-4" src="{{ $product->image_url }}" alt="Текущее изображение {{ $product->title }}">
+                </div>
+            @endif
+
+            <label for="path_img">Поменять изображение</label><br>
+            <input type="file" name="path_img" id="path_img" accept="image/*"><br>
 
             <input class="btn-edit" type="submit" value="Обновить">
         </form>
