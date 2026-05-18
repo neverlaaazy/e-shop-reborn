@@ -3,7 +3,6 @@
         <h2>Каталог товаров</h2>
 
         <div class="categories-menu mb-6">
-            <h3>Категории</h3>
             <div class="flex flex-wrap gap-3">
                 @foreach ($categories as $category)
                     <a href="{{ route('categories.show', $category) }}" class="px-4 py-2 bg-slate-100 rounded hover:bg-slate-200 transition">
