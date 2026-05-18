@@ -175,7 +175,7 @@ main{
 }
 .edit-card, .watch-card{
     color: rgb(0, 151, 76);
-    padding: 3px;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.089);
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -196,10 +196,12 @@ main{
 .manipulator-div{
     display: flex;
     flex-direction: column;
-    justify-content: right;
-    align-items: center;
+    align-items: right;
 }
 .manipulator-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 5px;
 }
 
